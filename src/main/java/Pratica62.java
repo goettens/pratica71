@@ -16,15 +16,18 @@ public class Pratica62 {
         Time time = new Time();
         
         time.addJogador("Meio Campo", new Jogador(8,"Bogado"));
-        time.addJogador("Zagueiro", new Jogador(7,"Maziero"));
+        time.addJogador("Zagueiro", new Jogador(11,"Maziero"));
         time.addJogador("Atacante", new Jogador(11,"Nadia"));        
-        time.addJogador("Zagueiro", new Jogador(1,"Bogdan"));
-        time.addJogador("Meio Campo", new Jogador(9,"Borsato"));
-        time.addJogador("Atacante", new Jogador(10,"Robson"));
+        
         
         List<Jogador> ordenados = time.ordena(new JogadorComparator(true, true, false));
         
+        for(Jogador o1 : ordenados){
+            System.out.println(o1.toString());
+        }
+        
         System.out.println(ordenados);
-        System.out.println(Collections.binarySearch(ordenados, new Jogador(8, "Bogdan")));
+        
+        System.out.println(Collections.binarySearch(ordenados, new Jogador(11, "Maziero")));
     }
 }

@@ -21,7 +21,6 @@ public class Time {
         jogadores = new HashMap<>();
     }
     
-
     public HashMap<String, Jogador> getJogadores() {
         return jogadores;
     }
