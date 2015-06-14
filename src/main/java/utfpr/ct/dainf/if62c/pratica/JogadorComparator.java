@@ -13,20 +13,20 @@ import java.util.Comparator;
  */
 public class JogadorComparator implements Comparator<Jogador>{
 
-    public boolean crescente;
+    public boolean numerico;
     public boolean alfa_cres;
     public boolean num_cres;
 
     public JogadorComparator() {
-        this.crescente = true;
+        this.numerico = true;
         this.alfa_cres = true;
         this.num_cres = true;
     }
 
-    public JogadorComparator(boolean crescente, boolean alfabetico, boolean numerico) {
-        this.crescente = crescente;
-        this.alfa_cres = alfabetico;
-        this.num_cres = numerico;
+    public JogadorComparator(boolean numerico, boolean num_cres, boolean alfa_cres) {
+        this.numerico = numerico;
+        this.alfa_cres = alfa_cres;
+        this.num_cres = num_cres;
     }
     private int comparaNumeros(Jogador o1, Jogador o2){
         if (o1.compareTo(o2) < 0){
@@ -76,7 +76,7 @@ public class JogadorComparator implements Comparator<Jogador>{
         if(o1.nome.equals(o2.nome) && o1.compareTo(o2) == 0){
             return 0;
         }
-        else if(crescente == true){
+        else if(numerico == true){
             if (o1.compareTo(o2)!=0){
                 return comparaNumeros(o1, o2);
             }
