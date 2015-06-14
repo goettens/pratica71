@@ -76,7 +76,7 @@ public class JogadorComparator implements Comparator<Jogador>{
         if(o1.nome.equals(o2.nome) && o1.compareTo(o2) == 0){
             return 0;
         }
-        else if(num_cres == true){
+        else if(crescente == true){
             if (o1.compareTo(o2)!=0){
                 return comparaNumeros(o1, o2);
             }
